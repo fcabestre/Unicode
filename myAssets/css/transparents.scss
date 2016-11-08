@@ -1,0 +1,59 @@
+@import "../../css/theme/source/solarized";
+
+body {
+  background: #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.reveal h1 {
+  color: $orange;
+}
+
+.reveal h2 {
+  color: $yellow;
+}
+
+.reveal .orange {
+  color: $orange;
+}
+
+.reveal .blue {
+  color: $blue;
+}
+
+.reveal .green {
+  color: $green;
+}
+
+.reveal .slides section img {
+  margin: 15px 0;
+  border: none;
+  box-shadow: 0 0 0;
+}
+
+.reveal .slides section img[src$=".svg"] {
+  margin: 15px 0;
+  border: none;
+  box-shadow: 0 0 0;
+}
+
+.reveal .slides section blockquote {
+  margin: 15px 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.00);
+  border: 0 solid;
+  box-shadow: 0 0 0;
+  color: $orange;
+  text-align: right;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: larger;
+}
+
+.reveal .slides section ul {
+  margin-bottom: 100%;
+}
+
+.reveal .slides section ul li {
+  list-style-type: none;
+}

@@ -35,6 +35,7 @@ module.exports = function(grunt) {
 			core: {
 				files: {
 					'css/reveal.css': 'css/reveal.scss',
+		        	'myAssets/css/transparents.css': 'myAssets/css/transparents.scss'
 				}
 			},
 			themes: {
@@ -118,7 +119,7 @@ module.exports = function(grunt) {
 				tasks: 'js'
 			},
 			theme: {
-				files: [ 'css/theme/source/*.scss', 'css/theme/template/*.scss' ],
+				files: [ 'css/theme/source/*.scss', 'css/theme/template/*.scss', 'myAssets/css/*.scss' ],
 				tasks: 'css-themes'
 			},
 			css: {
