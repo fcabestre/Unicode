@@ -17,6 +17,10 @@ body {
   color: $orange;
 }
 
+.reveal .red {
+  color: $red;
+}
+
 .reveal .blue {
   color: $blue;
 }
@@ -56,4 +60,9 @@ body {
 
 .reveal .slides section ul li {
   list-style-type: none;
+}
+
+.reveal .slides sub {
+  vertical-align: sub;
+  font-size: smaller;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Title</title>
+    <title>Unicode</title>
 
     <meta name="description" content="">
     <meta name="author" content="Frédéric Cabestre">
@@ -43,16 +43,204 @@
     <div class="slides">
 
         <section>
-            <h1>Title</h1>
+            <h2>Tout ce que vous croyez savoir sur <span class="orange">Unicode</span> et que vous auriez du demander
+            </h2>
         </section>
 
-    </div>
+        <section>
+            <img style="border: solid black 1px;" src="myAssets/images/Spolsky.png">
+        </section>
 
+        <section>
+            <!--img src="myAssets/images/A.svg"-->
+            <div data-svg-fragment="myAssets/images/A.svg#[*|label=base]">
+                <a class="fragment" title="[*|label=frag1]"></a>
+                <a class="fragment" title="[*|label=frag2]"></a>
+                <a class="fragment" title="[*|label=frag3]"></a>
+                <a class="fragment" title="[*|label=frag4]"></a>
+                <a class="fragment" title="[*|label=frag5]"></a>
+                <a class="fragment" title="[*|label=frag6]"></a>
+                <a class="fragment" title="[*|label=frag7]"></a>
+            </div>
+        </section>
+
+        <section>
+            <img style="border: none;" src="myAssets/images/ASCII.png">
+        </section>
+
+        <section>
+            <img style="border: solid black 1px;" src="myAssets/images/VT100.jpg">
+        </section>
+
+        <section>
+            <img src="myAssets/images/Latin15.png">
+        </section>
+
+        <section>
+            <h2>Unicode</h2>
+            <img style="border: solid black 1px;" src="myAssets/images/V.png">
+        </section>
+
+        <section>
+            <h2>Unicode</h2>
+            <ul style="margin-bottom: 10em">
+                <li style="margin-top: 2em" class="fragment">ISO/CEI 10646 <span class="orange">⊂</span> Unicode</li>
+                <li style="margin-top: 1em" class="fragment">17 <span class="green">plans</span> de 65 536 <span class="green">points de
+                    code</span>
+                </li>
+                <li class="fragment">1 114 112 points de code</li>
+                <li class="fragment"><span class="green">21</span> bits</li>
+                <li class="fragment">273 <span class="green">blocs</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Unicode</h2>
+            <img style="margin-bottom: 8em; margin-top: 2em" src="myAssets/images/Equiv.png">
+        </section>
+
+        <section>
+            <h2>Basic Multilingual Plane</h2>
+            <img style="border:  solid black 1px;;" src="myAssets/images/BMP.svg">
+        </section>
+
+        <section>
+            <h2>Supplementary Multilingual Plane</h2>
+            <img style="border:  solid black 1px;;" src="myAssets/images/SMP.svg">
+        </section>
+
+        <section>
+            <h2>Supplementary Ideographic Plane</h2>
+            <img style="border:  solid black 1px;" src="myAssets/images/SIP.svg">
+        </section>
+
+        <section>
+            <h2>UTF-32</h2>
+            <ul>
+                <li style="margin-top: 1em" class="fragment">21 bits sur 4 octets... <span
+                        class="fragment green">Facile</span></li>
+                <li style="margin-top: 1em" class="fragment">«Big Endian» ou «Little Endian»</li>
+                <li class="fragment"><span class="orange">B</span>yte <span class="orange">O</span>rder <span
+                        class="orange">M</span>ark: 0xFFFE ou 0xFEFF
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>UTF-16</h2>
+            <ul>
+                <li style="margin-top: 1em" class="fragment">21 bits sur 2 octets... <span
+                        class="fragment orange">Uhmm</span></li>
+                <img src="myAssets/images/UTF-16.png" class="fragment" style="margin-top: 1em;">
+            </ul>
+        </section>
+
+        <section>
+            <h2>UTF-8</h2>
+
+            <ul>
+                <li style="margin-top: 1em" class="fragment">21 bits sur 1 octet... <span class="fragment red">chausse-pied ?</span>
+                </li>
+                <div style="margin-top: 2em; font-size: 70%; text-align: left" class="fragment"><span
+                        class="blue">000000</span> ➼ <span class="blue">00007F</span> ⊢ <span class="blue">0</span><span
+                        class="green">b<sub>7</sub>...b<sub>0</sub></span>
+                </div>
+                <div style="font-size: 70%; text-align: left" class="fragment"><span class="blue">000080</span> ➼ <span
+                        class="blue">0007FF</span> ⊢ <span class="blue">110</span><span
+                        class="green">b<sub>11</sub>...b<sub>7</sub></span> <span
+                        class="blue">10</span><span class="green">b<sub>6</sub>...b<sub>0</sub></span>
+                </div>
+                <div style="font-size: 70%; text-align: left" class="fragment"><span class="blue">000800</span> ➼ <span
+                        class="blue">00FFFF</span> ⊢ <span class="blue">1110</span><span class="green">b<sub>16</sub>...b<sub>13</sub></span> <span
+                        class="blue">10</span><span
+                        class="green">b<sub>12</sub>...b<sub>6</sub></span>
+                    <span class="blue">10</span><span
+                            class="green">b<sub>5</sub>...b<sub>0</sub></span>
+                </div>
+                <div style="margin-bottom: 15em; font-size: 70%; text-align: left" class="fragment"><span class="blue">010000</span>
+                    ➼ <span class="blue">1FFFFF</span> ⊢ <span class="blue">11110</span><span
+                            class="green">b<sub>20</sub>...b<sub>18</sub></span>
+                    <span class="blue">10</span><span class="green">b<sub>17</sub>...b<sub>12</sub></span></span>
+                    <span class="blue">10</span><span
+                            class="green">b<sub>11</sub>...b<sub>6</sub></span></span>
+                    <span class="blue">10</span><span
+                            class="green">b<sub>5</sub>...b<sub>0</sub></span>
+                </div>
+            </ul>
+
+        </section>
+
+        <section>
+            <h2>Java</h2>
+            <span class="fragment">
+                <pre><code class="java" data-trim style="font-size: 14px">
+System.out.println("𝌆");
+
+// Outputs 𝌆
+                </code></pre>
+            </span>
+            <span class="fragment">
+                <pre><code class="java" data-trim style="margin-bottom: 15em; font-size: 14px">
+final PrintStream outStreamUTF16 = new PrintStream(System.out, true, "UTF-16");
+outStreamUTF16.println("𝌆");
+
+// Outputs ���4�
+
+final PrintStream outStreamUTF32BE = new PrintStream(System.out, true, "UTF-32BE");
+outStreamUTF32BE.println("𝌆");
+
+// Outputs �
+                </code></pre>
+            </span>
+        </section>
+
+        <section>
+            <h2>Java</h2>
+            <span class="fragment">
+
+            <pre><code class="java" data-trim style="font-size: 14px;">
+"𝌆".length() ◀▶ 2
+"𝌆".chars().count() ◀▶ 2
+"𝌆".codePointCount(0, "𝌆".length() ) ◀▶ 1
+"𝌆".codePoints().count() ◀▶ 1
+            </code></pre>
+            </span>
+
+            <span class="fragment">
+            <pre><code class="java" data-trim style="font-size: 14px;">
+"𝌆".getBytes().length ◀▶ 4
+"𝌆".getBytes() ◀▶ [ F0 9D 8C 86 ]
+"𝌆".getBytes("UTF-16BE").length ◀▶ 4
+"𝌆".getBytes("UTF-16BE") ◀▶ [ 34 D8 06 DF ]
+"𝌆".getBytes("UTF-16").length ◀▶ 4
+"𝌆".getBytes("UTF-32") ◀▶ [ 00 01 D3 06 ]
+            </code></pre>
+            </span>
+
+            <span class="fragment">
+            <pre><code class="java" data-trim style="margin-bottom: 15em; font-size: 14px;">
+"𝌆".toCharArray() ◀▶ [ ? ? ]
+Character.isHighSurrogate("𝌆".toCharArray()[0]) ◀▶ true
+Character.isHighSurrogate("𝌆".toCharArray()[1]) ◀▶ true
+Character.UnicodeBlock.of("𝌆".codePointAt(0)) ◀▶ TAI_XUAN_JING_SYMBOLS
+"𝌆".codePointAt(0) ◀▶ 1D306
+"𝌆".codePointBefore(1) ◀▶ D834
+"𝌆".codePointBefore(2) ◀▶ 1D306
+            </code></pre>
+            </span>
+        </section>
+
+        <section>
+            <div style="margin-left: 40px; margin-top: 1em; text-align: left" class="green">Frédéric Cabestre</div>
+            <div style="margin-left: 40px; font-size: smaller; text-align: left" class="blue">@fcabestre</div>
+            <h2 style="margin-top: 2.5em; margin-bottom: 8em">Merci</h2>
+        </section>
+    </div>
+    <!--span class="fragment blue">Wikipédia</span-->
 </div>
 
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
-<script src="myAssets/js/d3.min.js"></script>
 
 <script>
 
@@ -67,7 +255,7 @@
         transition: 'none', // none/fade/slide/convex/concave/zoom
 
         math: {
-            mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+            mathjax: 'myAssets/js/MathJax.js',
             config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
         },
 
@@ -99,6 +287,7 @@
             {src: 'plugin/zoom-js/zoom.js', async: true},
             {src: 'plugin/notes/notes.js', async: true},
             {
+                d3: 'myAssets/js/d3.min.js',
                 src: 'myAssets/js/reveal-svg-fragment.js', condition: function () {
                 return !!document.querySelector('[data-svg-fragment]');
             }
